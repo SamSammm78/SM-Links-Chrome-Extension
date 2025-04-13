@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMLinks</title>
+    <style>
+    /* Styles généraux du body */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Titre */
+    h1 {
+        font-size: 20px; /* Titre plus grand */
+        color: #6400da;
+        text-align: center;
+        padding: 5px;
+    }
+
+
+    /* Style des labels */
+    label {
+      padding: 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* Style des inputs et select */
+    input, select {
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    /* Focus sur les champs de texte */
+    input:focus, select:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    /* Bouton */
+    button {
+        background-color: #6400da;
+        color: white;
+        border: none;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #4a00a6;
+    }
+
+    /* Message de confirmation */
+    #responseMessage {
+        text-align: center;
+        font-size: 14px;
+        color: #2ecc71;
+        margin-top: 10px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+    <h1>Add a product :</h1>
+    
+    <form id="dataForm">
+        <label for="ItemName">Item Name :</label>
+        <input type="text" id="ItemName" name="ItemName" required><br><br>
+
+        <label for="Image">Image :</label>
+        <input type="text" id="Image" name="Image" required><br><br>
+
+        <label for="Price">Price :</label>
+        <input type="text" id="Price" name="Price" required><br><br>
+
+        <label for="Type">Type :</label>
+        <select id="type" name="type">
+          <option value=0>T-Shirts</option>
+          <option value=1>Hoodies/Sweaters</option>
+          <option value=2>Shoes</option>
+          <option value=3>Jackets</option>
+          <option value=4>Pants/Shorts</option>
+          <option value=5>Headwear</option>
+          <option value=6>Accessories</option>
+        </select><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <p id="responseMessage"></p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
